@@ -14,7 +14,7 @@ The Streamlit app showcases the use of Streamlit, Plotly Express, and Pandas to 
 ## Usage
 
 1. Clone the repository to your local machine:
-https://github.com/yourusername/your-streamlit-app.git
+https://github.com/Rami1804/project/app.git
 
 2. Navigate to the project directory:
 cd your-streamlit-app
