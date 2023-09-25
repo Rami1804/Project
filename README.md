@@ -5,11 +5,11 @@ We will provide the user with the dataset on car sales advertisements. The proje
 
 # Streamlit App
 
-This is a simple Streamlit app that demonstrates the first five lines of data fram from the vehicles_us.csv file. More over the app shows a histogram for the model color and a scatter plot for the top fiftenn ordered models and how to use checkboxes to change the behavior of plots.
+This is a simple Streamlit app that demonstrates the first five lines of data fram from the vehicles_us.csv file. More over the app shows a histogram for the model color and a scatter plot for the top fiftenn ordered models and how to use checkboxes to change the behavior of plots. And to choose certain data types and see the tables for them.
 
 ## Description
 
-The Streamlit app showcases the use of Streamlit, Plotly Express, and Pandas to create an interactive scatter plot, histogram plot. The app allows users to toggle customization of the plot by checking or unchecking a checkbox. When the checkbox is checked, the plot's appearance is customized; when it's unchecked, the plot reverts to its default appearance.
+The Streamlit app showcases the use of Streamlit, Plotly Express, and Pandas to create an interactive scatter plot, histogram plot. The app allows users to toggle customization of the plot by checking or unchecking a checkbox. When the checkbox is checked, the plot's appearance is customized; when it's unchecked, the plot reverts to its default appearance. And last but not least, the select box for choosing the type of model and showing the first 20 rows of the data frame table realted to it. 
 
 ## Usage
 
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 4. Run the Streamlit app:
 streamlit run app.py
 
-5. Open a web browser and access the app at `http://localhost:8501`.
+5. Open a web browser and access the app at `http://localhost:8501` for local demo on your station.
 
 ## Dependencies
 
@@ -33,4 +33,7 @@ streamlit run app.py
 - [Plotly Express](https://plotly.com/python/plotly-express/)
 - [Pandas](https://pandas.pydata.org/)
 
+## Live Demo
+Check out the live demo of the app on Render:
 
+[![Open App](https://rami-awd.onrender.com/)](https://rami-awd.onrender.com/)

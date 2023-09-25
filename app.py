@@ -58,9 +58,9 @@ st.text('You can filter the data however you want')
 
 
 #creating options to choose from
-rest_type=df['type'].unique() 
+rest_type=df['type'].unique()
 # create a parameter that is a final choice
 make_choice = st.selectbox('Select your Model Type:', rest_type)
 
-filtered_type=df[df.type==make_choice]
+filtered_type=df[df.type==make_choice][:20]
 st.table(filtered_type)
