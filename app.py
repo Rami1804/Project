@@ -8,7 +8,13 @@ st.write("""
 st.write("""
 #### head of data
 """)
-df = pd.read_csv(r'C:\Users\Rami\anaconda3\Project\vehicles_us.csv')
+try:
+    df = pd.read_csv(r'C:\Users\Rami\anaconda3\Project\vehicles_us.csv')
+
+except:
+    df = pd.read_csv('vehicles_us.csv') 
+
+#df = pd.read_csv('c/Users/Rami/anaconda3/Project/vehicles_us.csv')
 st.table(df.head())
 
 st.header("Histogram using streamlit plotly_chart method")
@@ -42,3 +48,19 @@ else:
 
 # Display the scatter plot using st.plotly_chart
 st.write(fig2)
+
+
+    ## filtering the data
+st.write("""## 
+         Block with Filtered Data
+""")
+st.text('You can filter the data however you want')
+
+
+#creating options to choose from
+rest_type=df['type'].unique() 
+# create a parameter that is a final choice
+make_choice = st.sidebar.selectbox('Select your Model Type:', rest_type)
+
+filtered_type=df[df.type==make_choice]
+st.table(filtered_type)

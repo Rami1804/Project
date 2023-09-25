@@ -14,10 +14,10 @@ The Streamlit app showcases the use of Streamlit, Plotly Express, and Pandas to 
 ## Usage
 
 1. Clone the repository to your local machine:
-https://github.com/Rami1804/project/app.git
+https://github.com/Rami1804/project.git
 
 2. Navigate to the project directory:
-cd your-streamlit-app
+cd /c/Users/Rami/anaconda3/Project
 
 3. Install the required dependencies:
 pip install -r requirements.txt
