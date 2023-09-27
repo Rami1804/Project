@@ -17,14 +17,24 @@ except:
 #df = pd.read_csv('c/Users/Rami/anaconda3/Project/vehicles_us.csv')
 st.table(df.head())
 
-st.header("Histogram using streamlit plotly_chart method")
-fig1 = px.histogram(df, x='paint_color', title='Body_Color')
+st.header("Histogram using streamlit plotly chart method")
+fig1 = px.histogram(df, x='paint_color', title='Body Color Histogram')
+fig1.update_xaxes(title_text='Paint Color')
+# Remove y-axis tick labels
+fig1.update_yaxes(title_text='Number of Vehicale adds')
 # Use st.plotly_chart to display the Plotly figure in Streamlit
 st.plotly_chart(fig1)
 
 st.header("scatter plot using streamlit write method")
-Top_model = df.groupby('model')['price'].count().sort_values(ascending=False)[:15].reset_index()
-fig2 = px.scatter(Top_model, y='model', x='price', title='Top 15 Models', labels={'price': 'count', 'y': 'Y-axis'})
+Top_model = df.groupby('model')['type'].count().sort_values(ascending=False)[:15].reset_index()
+
+fig2 = px.scatter(Top_model, y='model', x='type', title='Scatter Plot Most advertised Model',labels={'x': 'Number of advertisments', 'y': None})
+
+fig2.update_xaxes(title_text='Number of advertisments')
+# Remove y-axis tick labels
+fig2.update_yaxes(title_text=None)
+
+#fig2 = px.scatter(Top_model, y='model', x='price', title='Top 15 Models', labels={'price': 'count', 'y': 'Y-axis'})
 st.write(fig2)
 
 # Create a checkbox to control the behavior of the plot
@@ -40,11 +50,13 @@ if customize_plot:
     # For example, you can add or modify plot elements
     #scatter_fig.update_traces(marker=dict(size=10, opacity=0.7))
     fig2.update_traces(marker=dict(size=10, opacity=0.7))
+    fig2.update_traces(marker=dict(color="red"))  # Change all points to red
 else:
     # Restore the default plot behavior here
     # You can reset any changes made when the checkbox is unchecked
     #scatter_fig.update_traces(marker=dict(size=5, opacity=1.0))
     fig2.update_traces(marker=dict(size=5, opacity=1.0))
+    fig2.update_traces(marker=dict(color="blue"))  # Change all points to red
 
 # Display the scatter plot using st.plotly_chart
 st.write(fig2)
