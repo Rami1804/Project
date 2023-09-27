@@ -34,27 +34,24 @@ fig2.update_xaxes(title_text='Number of advertisments')
 # Remove y-axis tick labels
 fig2.update_yaxes(title_text=None)
 
-#fig2 = px.scatter(Top_model, y='model', x='price', title='Top 15 Models', labels={'price': 'count', 'y': 'Y-axis'})
 st.write(fig2)
 
 # Create a checkbox to control the behavior of the plot
 customize_plot = st.checkbox("Customize Plot")
 
 # Create a scatter plot using Plotly Express
-#scatter_fig = px.scatter(data, x='X-axis', y='Y-axis', title='Sample Scatter Plot')
-# fig2
 
 # Conditional statements to change plot behavior based on checkbox state
 if customize_plot:
     # Customize the plot behavior here
     # For example, you can add or modify plot elements
-    #scatter_fig.update_traces(marker=dict(size=10, opacity=0.7))
+    
     fig2.update_traces(marker=dict(size=10, opacity=0.7))
     fig2.update_traces(marker=dict(color="red"))  # Change all points to red
 else:
     # Restore the default plot behavior here
     # You can reset any changes made when the checkbox is unchecked
-    #scatter_fig.update_traces(marker=dict(size=5, opacity=1.0))
+    
     fig2.update_traces(marker=dict(size=5, opacity=1.0))
     fig2.update_traces(marker=dict(color="blue"))  # Change all points to red
 
