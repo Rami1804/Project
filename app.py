@@ -37,7 +37,7 @@ fig2.update_yaxes(title_text=None)
 st.write(fig2)
 
 # Create a checkbox to control the behavior of the plot
-customize_plot = st.checkbox("Customize Plot")
+customize_plot = st.checkbox("Change Plot Points color and size")
 
 # Create a scatter plot using Plotly Express
 
