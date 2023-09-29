@@ -18,7 +18,7 @@ except:
 st.table(df.head())
 
 st.header("Histogram using streamlit plotly chart method")
-fig1 = px.histogram(df, x='paint_color', title='Body Color Histogram')
+fig1 = px.histogram(df, x='paint_color', title='Paint Color Histogram')
 fig1.update_xaxes(title_text='Paint Color')
 # Remove y-axis tick labels
 fig1.update_yaxes(title_text='Number of Vehicale adds')
